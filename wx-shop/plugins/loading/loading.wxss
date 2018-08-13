@@ -1,0 +1,48 @@
+/* plugins/loading/loading.wxss */
+
+.loading-wrap{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading-content{
+  width: 230rpx;
+  border-radius: 20rpx;
+  background-color: rgba(0, 0, 0,.46);
+  transform: translateY(-120rpx);
+}
+
+.loading-text{
+  font-size: 28rpx;
+  color: #f1f1f1;
+  text-align: center;
+  letter-spacing: 4rpx;
+  margin-bottom: 20rpx;
+  height: 40rpx
+}
+
+.loading-icon{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 40rpx auto;
+  display: block;
+}
+
+.icon-rotate{
+  animation: roteteAll .65s linear infinite;  
+}
+
+@keyframes roteteAll {
+  0%{
+    transform: rotate(0)
+  }
+  100%{
+    transform: rotate(360deg)
+  }
+}

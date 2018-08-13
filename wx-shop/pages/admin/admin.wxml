@@ -1,0 +1,46 @@
+<!--logs.wxml-->
+<view class="admin-wrap">
+  <!-- 账号  -->
+  <view class='admin-top click-active'>
+    <view class='admin-top-left'></view>
+    <view class='admin-top-middle'>
+      <text>{{name}}</text>
+      <view class='bind-mi'>绑定小米账号</view>
+    </view>
+    <view class='admin-top-right'></view>
+  </view>
+
+  <!-- 米粉团  -->
+  <view class='admin-mifans click-active admin-style'>
+    <view class='admin-mifans-text admin-mifans-icon'> 
+      我的米粉团（内测版）
+    </view>
+  </view>
+
+  <!--订单等  -->
+
+  <view class='admin-order'>
+    <view class='admin-oder-li click-active'>
+      <view class='admin-mifans-text  admin-style-order  admin-mifans-icon' > 
+        我的订单
+      </view>
+    </view>
+    <view class='admin-oder-li click-active'>
+      <view class='admin-mifans-text  admin-style-order  admin-mifans-icon' > 
+       我的优惠券
+      </view>
+    </view>
+    <view class='admin-oder-li click-active'>
+      <view class='admin-mifans-text  admin-style-order  admin-mifans-icon' style='border:0'> 
+       我的F码
+      </view>
+    </view>
+  </view>
+
+  <!--设置  -->
+  <view class='admin-mifans click-active admin-style'>
+    <view class='admin-mifans-text admin-set-icon'> 
+      设置
+    </view>
+  </view>
+</view>

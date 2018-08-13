@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#fef8f3",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "pop-bottom": "/plugins/popBottom/popBottom",
+    "loading":"/plugins/loading/loading",
+    "bg":"/plugins/bg/bg"
+  }
+}

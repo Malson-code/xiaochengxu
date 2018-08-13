@@ -1,0 +1,6 @@
+<!--plugins/bg/bg.wxml-->
+
+
+<view class='pop-bg pop-bg-show' catchtouchmove='{{false}}'>
+  <view class='pop-bg-inner' bindtap='bgClick'></view>
+</view>

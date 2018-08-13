@@ -1,0 +1,120 @@
+<!--product.wxml-->
+
+
+<view class="product-wrap">
+   <!-- 图片展示 -->
+  <swiper 
+      indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" 
+      interval="{{interval}}" 
+      duration="{{duration}}"
+      class='product-swiper'
+    >
+    <block wx:for="{{imgPathList}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 名称 -->
+  <view class='product-state'>
+    <view style='font-size:36rpx;margin-bottom:10rpx'>{{title}}</view>
+    <text style='color:#f56600;margin-right:20rpx'>[8GB+128GB 8月30日早上2点开抢]</text>
+    <text style='color:#999'>全球首款双频GPS / 骁龙845处理器 / 红外人脸解锁 / AI变焦双摄 / 三星 AMOLED 屏</text>
+    <view class='product-price'>
+       <text style='font-size:36rpx;margin-right:6rpx'>¥</text><text>2699</text>
+    </view>
+  </view>
+
+  <!-- 其他 配件 -->
+  <view class='product-other'>
+    <view class='product-list' bindtap='action'>
+      <text class='text'>促销</text>
+      <text>赠小米移动电源2</text>
+    </view>
+    <view class='product-list' bindtap='action'>
+      <text class='text'>已选</text>
+      <text>小米8 6GB+64GB 黑色 x1</text>
+    </view>
+    <view class='product-list' bindtap='action'>
+      <text class='text'>送至</text>
+      <text>北京市 东城区 <text style='color:#f56600'>有现货</text></text>
+    </view>
+  </view>
+
+
+  <!-- 购买按钮 -->
+  <view class='product-buy'>
+    <view class='product-buy-list1' style='border-right:1px solid #ccc' bindtap='error'>
+        <view>
+          <image src='../../../imgs/nav/home.png'></image>
+        </view>
+        首页
+    </view>
+    <view class='product-buy-list1' bindtap='warning'>
+        <view>
+          <image src='../../../imgs/nav/gouwuche.png'></image>
+        </view>
+      购物车
+    </view>
+    <view class='product-buy-list2' bindtap='purchase'>加入购物车</view>
+  </view>
+
+  <!-- 详情和评论 -->
+  <view class='product-comment'>
+    <view class='title'>
+      <view class='list {{showType==1?"active":""}}' bindtap='comment' data-type='1'>概述</view>
+      <view class='list {{showType==2?"active":""}}' bindtap='comment' data-type='2'>评论</view>
+      <view class='line ' style='left:{{showType==1?0:showType==2?"50%":""}}'></view>
+    </view>
+    <view>
+      <view class='content {{showType==1?"":"none"}}'>
+        <!-- 参数  -->
+        <image wx:for="{{picPathList}}" wx:key="*this" src='{{item}}' class='content-img' ></image>
+      </view>
+      <view class='content {{showType==2?"":"none"}}'>
+        <!-- 评论 -->
+      <view class='comment-wrap'>
+        <view  wx:for="{{commentList}}" wx:key="*this" class='comment-for'>
+          <view class='comment-list'>
+              <view class='comment-logo'><image src='{{item.logoPath}}'></image></view>
+              <view class='comment-name'>
+                <view>{{item.name}}</view>
+                <view style='color:#666'>{{item.time}}</view>
+              </view>
+              <view class='comment-level'>
+                满意
+              </view>         
+            </view>
+            <view class='comment-content'>{{item.comment}}</view>
+            <view class='comment-pic'>
+              <image src='imgs/comment-admin.jpg' wx:for="{{item.picList}}" wx:key="*this"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='product-bottom'>我是底线</view>
+    </view>
+  </view>
+
+</view>
+
+<!-- 底部弹框 -->
+<view wx:if="{{bottomPopType}}">
+  <bg bindmyevent="onMyEvent"  />
+  <pop-bottom 
+    id='popBottom'
+    name="大帅哥" 
+    show="{{bottomPopType}}"
+    bindmyevent="onMyEvent"
+  >
+    <view style='height:600rpx;text-align:center' >
+    </view>
+  </pop-bottom>
+</view>
+
+
+
+<!-- loading -->
+<loading loading-show="{{ loading }}" wx:if="{{ loading }}"></loading>

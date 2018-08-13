@@ -1,0 +1,62 @@
+
+.search-wrap{
+  height: 120rpx;
+  background-color: #dd4c49;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative
+}
+
+.search-input{
+  width: 68%;
+  height: 80rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding-left: 50rpx;
+  border-radius: 10rpx;
+}
+.search-icon{
+  width: 60rpx;
+  height: 60rpx;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA7klEQVQ4T6WSbRHCQAwFtw7AARKQQBWAA0ACDpCAA0ABoAAkIAEJOIDZzqVz0y9mSv6Ecsm+d8kV/BlFo38CrIEVsABewAM4p9ySywFz4AjcgFNqtkHYHrgDuyYhACpbsAWePbe6JheH/DwAKhiRuxiKCNfpOwoC4IFWvfNQqG6tV6wiAJ/s9xCg5XQMQJctBw5Ie65sKKzTRT3ocODOPTD3RWdN/g605SzcdT3lRHPyrln7ZdcWQlUXG+CSbLo6laepaZn+ryHNpyxolprMOnEucWdd+tT9riBdgB9zrDYgRHA5BqCAkMrpWEDt8gvBgTQR258h1AAAAABJRU5ErkJggg==);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 54rpx;
+  top: 46rpx
+}
+.search-btn{
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 0;
+  margin-left: 40rpx
+}
+
+.hot-search{
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: #666;
+  margin-top: 20rpx
+}
+
+.hot-list{
+  display: flex;
+  margin-top: 26rpx;
+  padding: 0 30rpx;
+  flex-wrap: wrap;
+}
+
+.hot-item{
+  color: #999;
+  font-size: 34rpx;
+  padding: 8rpx 40rpx;
+  background-color: #ddd;
+  border-radius: 6rpx;
+  margin-right: 20rpx;
+  margin-bottom: 14rpx
+}
+.hot-item:active{
+  opacity: .8
+}

@@ -1,0 +1,31 @@
+/**app.wxss**/
+.container {
+  
+} 
+page{
+  box-sizing: border-box;
+  padding: 0;
+  background-color: #f5f5f5
+}
+view{
+  box-sizing: border-box;
+}
+
+.click-active:active,.click-active:active .admin-style-order{
+  background-color: #f1f1f1!important
+}
+.none{
+  display: none;
+}
+
+
+/* template wxss start*/
+.pop-content{
+  position: fixed;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 100;
+  top: 100%;
+}
+/* template wxss end*/

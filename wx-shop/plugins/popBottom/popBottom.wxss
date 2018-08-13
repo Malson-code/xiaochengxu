@@ -1,0 +1,12 @@
+/* plugins/popBottom/popBottom.wxss */
+
+.pop-bottom{
+}
+
+.pop-bottom{
+  position: fixed;
+  width: 100%;
+  background-color: #fff; 
+  z-index: 100;
+  bottom: -600rpx;
+}

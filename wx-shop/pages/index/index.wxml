@@ -1,0 +1,45 @@
+<!--index.wxml-->
+<view class="index-container">
+  <!-- 搜索 -->
+  <view class='search-wrap' bindtap='search'>
+    <view class='search-input'/>
+    <text class='search-text'>搜索商品</text>
+  </view>
+  <!-- banner容器  -->
+  <view class="page-body">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" indicator-color="#e1e1e1" indicator-active-color="#fff" interval="{{interval}}">
+      <block wx:for="{{imgUrls}}" wx:key="*this">
+        <swiper-item>
+          <image src="{{item}}" class='swip-img' />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 中间按钮  -->
+  <view class='middle-wrap' style='margin-top:10px'>
+    <view wx:for="{{middleBtns}}" wx:key="*this" bindtap='middleTap' id='{{item.title}}'>
+      <image src='{{item.iconPath}}' class='middle-img'></image>
+      <view class='middle-text'>{{item.title}}</view>
+    </view>
+  </view>
+  <!-- 主体商品展示  -->
+  <view class='index-main'>
+    <view class='product-left'>
+      <image src='../../imgs/home/product/1.jpg'  bindtap='product' data-type='mi8' />
+    </view>
+    <view class='product-right'>
+      <view class='product-right-top'>
+        <image src='../../imgs/home/product/2.jpg' bindtap='product' data-type='miban'/>
+      </view>
+      <view class='product-right-bottom'>
+        <image src='../../imgs/home/product/3.jpg' bindtap='product' data-type='mitv'/>
+      </view>
+    </view>
+  </view>
+
+  <!-- 活动 -->
+
+    <view style='width:100%;margin-top:20rpx'>
+      <image src='../../imgs/home/product/4.jpg'  style='width:100%;height:320rpx'></image>
+    </view>
+</view>

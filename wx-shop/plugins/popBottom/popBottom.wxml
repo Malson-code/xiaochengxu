@@ -1,0 +1,7 @@
+<!--plugins/popBottom/popBottom.wxml-->
+
+
+<view class='pop-bottom' catchtouchmove="{{false}}" animation="{{animationData}}" > 
+  <button bindtap='popBottomOut'>退出</button>
+  <slot></slot>
+</view>

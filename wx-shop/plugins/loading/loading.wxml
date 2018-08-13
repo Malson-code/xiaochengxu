@@ -1,0 +1,9 @@
+<!--plugins/loading/loading.wxml-->
+
+
+<view class='loading-wrap' wx:if="{{loadingShow}}" catchtouchmove='{{false}}'>
+  <view class='loading-content'> 
+    <image src='{{iconSrc}}' class='loading-icon {{loadingShow==="loading"?"icon-rotate":""}}'></image> 
+    <view class='loading-text' style='color:{{textColor}}'>{{loadingText}}</view>
+  </view>
+</view>
